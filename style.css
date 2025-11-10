@@ -1,135 +1,124 @@
-:root {
-  --blue: #0b76ef;
-  --light: #f5f7fa;
-  --dark: #222;
-  --text: #333;
+/* Reset et base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: var(--light);
-  color: var(--text);
-  scroll-behavior: smooth;
+  background-color: #0e0e0e;
+  color: #f2f2f2;
+  line-height: 1.6;
 }
 
-/* HEADER */
+/* Header */
 header {
-  background: var(--blue);
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background: #111;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-.logo {
-  margin: 0;
-  font-weight: 600;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+  color: #00c3ff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
 nav a {
-  color: white;
   text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: 500;
+  color: #f2f2f2;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #00c3ff;
 }
 
-/* HERO */
+/* Section hero */
 .hero {
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, #e3f0ff, #f7fbff);
-  padding: 2rem;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #111, #0e0e0e);
 }
 
 .hero h2 {
-  font-size: 2rem;
-  color: var(--dark);
+  font-size: 2.2rem;
+  color: #00c3ff;
 }
 
 .hero p {
-  max-width: 600px;
-  margin: 1rem auto;
+  margin-top: 1rem;
+  color: #ccc;
+  font-size: 1.1rem;
 }
 
 .btn {
   display: inline-block;
-  background: var(--blue);
-  color: white;
-  padding: 0.7rem 1.5rem;
-  border-radius: 6px;
+  margin-top: 2rem;
+  background: #00c3ff;
+  color: #0e0e0e;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background: #095ec0;
+  background: #00a6d4;
 }
 
-/* SECTIONS */
+/* Sections générales */
 section {
   padding: 4rem 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: auto;
 }
 
 h2 {
+  color: #00c3ff;
+  margin-bottom: 1.5rem;
   text-align: center;
-  margin-bottom: 2rem;
-  color: var(--dark);
 }
 
-/* SKILLS */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-
-.skill-card {
-  background: white;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* PROJECTS */
-.projects-grid {
+/* Grille de projets */
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
-.project-card {
-  background: white;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  text-align: center;
+.card {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.1);
+  transition: transform 0.3s;
 }
 
-/* CONTACT */
-#contact {
-  text-align: center;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-/* FOOTER */
+/* Footer */
 footer {
   text-align: center;
-  background: var(--blue);
-  color: white;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 2rem;
+  background: #111;
+  font-size: 0.9rem;
+  color: #aaa;
 }
