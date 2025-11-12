@@ -114,6 +114,38 @@ h2 {
   transform: translateY(-5px);
 }
 
+/* Section À propos */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00c3ff;
+  box-shadow: 0 0 20px rgba(0, 195, 255, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 195, 255, 0.5);
+}
+
+.about-container p {
+  max-width: 500px;
+  font-size: 1.05rem;
+  color: #ccc;
+}
+
+
 /* Footer */
 footer {
   text-align: center;
@@ -121,4 +153,30 @@ footer {
   background: #111;
   font-size: 0.9rem;
   color: #aaa;
+}
+
+
+/* Animation d'apparition */
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 195, 255, 0.3);
 }
