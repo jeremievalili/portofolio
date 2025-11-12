@@ -34,3 +34,39 @@ filterButtons.forEach((btn) => {
     });
   });
 });
+
+
+// --- Validation simple du formulaire ---
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !message) {
+    status.textContent = "⚠️ Merci de remplir tous les champs.";
+    status.style.color = "orange";
+    return;
+  }
+
+  const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!emailRegex.test(email)) {
+    status.textContent = "⚠️ Adresse e-mail invalide.";
+    status.style.color = "orange";
+    return;
+  }
+
+  // Message de confirmation
+  status.textContent = "✅ Message envoyé avec succès";
+  status.style.color = "#00c3ff";
+  form.reset();
+
+  // Animation du message
+  setTimeout(() => {
+    status.textContent = "";
+  }, 4000);
+});

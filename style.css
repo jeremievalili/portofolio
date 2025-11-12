@@ -258,3 +258,48 @@ section.visible {
   transform: translateY(-8px);
   box-shadow: 0 0 25px rgba(0, 195, 255, 0.25);
 }
+
+/* Formulaire de contact */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 195, 255, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  color: #00c3ff;
+  font-weight: 500;
+}
+
+input, textarea {
+  background: #0e0e0e;
+  color: #f2f2f2;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #00c3ff;
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.3);
+  outline: none;
+}
+
+.status {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #00c3ff;
+}
