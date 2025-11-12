@@ -14,3 +14,23 @@ const revealOnScroll = () => {
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll(); // pour l’état initial
+
+
+// --- Filtrage des projets ---
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Retirer l'état actif des autres boutons
+    filterButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const category = btn.dataset.filter;
+
+    projectCards.forEach((card) => {
+      const isVisible = category === "all" || card.dataset.category === category;
+      card.style.display = isVisible ? "block" : "none";
+    });
+  });
+});

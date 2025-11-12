@@ -180,3 +180,81 @@ section.visible {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 0 20px rgba(0, 195, 255, 0.3);
 }
+
+
+/* Filtres */
+.filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background: none;
+  border: 2px solid #00c3ff;
+  color: #00c3ff;
+  padding: 0.5rem 1.2rem;
+  margin: 0.3rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  background: #00c3ff;
+  color: #0e0e0e;
+}
+
+.filter-btn.active {
+  background: #00c3ff;
+  color: #0e0e0e;
+}
+
+/* Grille de projets */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.project-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-info h3 {
+  color: #00c3ff;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Effet au survol */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 195, 255, 0.25);
+}
