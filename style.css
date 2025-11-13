@@ -38,8 +38,7 @@ header {
 
 nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 2rem;
 }
 
 nav h1 {
@@ -47,20 +46,16 @@ nav h1 {
   color: #00c3ff;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
 
 nav a {
   text-decoration: none;
-  color: #f2f2f2;
-  transition: 0.3s;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #00c3ff;
+  color: var(--accent-color);
 }
 
 /* Section hero */
