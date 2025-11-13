@@ -73,7 +73,7 @@ nav a:hover {
   nav {
     position: absolute;
     top: 60px;
-    right: 0;
+    right: 1rem;
     background: var(--bg-color);
     flex-direction: column;
     align-items: flex-start;
@@ -83,6 +83,7 @@ nav a:hover {
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     border-radius: 8px;
     display: none; /* caché par défaut */
+    transition: all 0.3s ease-in-out
   }
 
   nav.show {

@@ -16,13 +16,7 @@ const revealOnScroll = () => {
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll(); // pour l’état initial
 
-// Menu hamburger
-const menuToggle = document.getElementById("menu-toggle");
-const navbar = document.getElementById("navbar");
 
-menuToggle.addEventListener("click", () => {
-  navbar.classList.toggle("show");
-});
 
 // --- Filtrage des projets ---
 const filterButtons = document.querySelectorAll(".filter-btn");
@@ -100,4 +94,12 @@ window.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("dark-mode");
     toggleButton.textContent = "☀️";
   }
+});
+
+// --- MENU BURGER ---
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+  navbar.classList.toggle("show");
 });
