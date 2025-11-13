@@ -14,11 +14,26 @@ body {
 
 /* Header */
 header {
-  background: #111;
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background: var(--bg-color);
+  transition: background 0.3s ease;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
+  color: var(--accent-color);
 }
 
 nav {
