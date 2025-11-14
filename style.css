@@ -83,7 +83,8 @@ nav a:hover {
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     border-radius: 8px;
     display: none; /* caché par défaut */
-    transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
   }
 
   nav.show {
@@ -104,6 +105,22 @@ nav a:hover {
   header {
     justify-content: space-between;
   }
+  /* Bouton de thème normal caché sur mobile */
+.theme-toggle {
+  display: none;
+}
+
+/* Bouton de thème intégré dans le menu mobile */
+nav .mobile-theme {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
 }
 
 
