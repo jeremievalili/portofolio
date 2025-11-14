@@ -95,33 +95,35 @@ nav a:hover {
     display: block; /* visible uniquement sur mobile */
   }
 
-  /* On cache le bouton de thème à gauche du menu sur mobile pour ne pas surcharger */
+  /* On cache le bouton de thème du header sur mobile */
   .theme-toggle {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
+    display: none;
+  }
+
+  /* Bouton de thème placé DANS le menu mobile */
+  nav .mobile-theme {
+    display: block;
+    width: 100%;          /* même largeur que les liens */
+    text-align: left;     /* aligné comme les autres */
+    padding: 0.5rem 0;    /* même espacement */
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+
+  /* Pour garantir que les liens du menu et le bouton thème ont le même style */
+  nav a,
+  nav .mobile-theme {
+    margin: 0.3rem 0;
   }
 
   header {
     justify-content: space-between;
   }
-  /* Bouton de thème normal caché sur mobile */
-.theme-toggle {
-  display: none;
 }
 
-/* Bouton de thème intégré dans le menu mobile */
-nav .mobile-theme {
-  display: block;
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-  color: var(--text-color);
-  cursor: pointer;
-  padding: 0.5rem 0;
-}
-
-}
 
 
 /* Section hero */
